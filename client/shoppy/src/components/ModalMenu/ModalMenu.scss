@@ -1,0 +1,58 @@
+@import "../../config.scss";
+
+.modal_menu {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  transform: translate3d(-2000px, 0, 0);
+  transition: transform 400ms linear;
+  background: #fff;
+  z-index: 98;
+  i {
+    position: absolute;
+    top: 200px;
+    font-size: 2rem;
+    right: 3rem;
+    color: $primaryColor;
+    cursor: pointer;
+    &:hover {
+      opacity: 0.8;
+      transition: transform 200ms linear;
+    }
+  }
+  &.modal_open {
+    transform: translate3d(0, 0, 0) !important;
+  }
+  .modal_menu_inner {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    ul {
+      li {
+        text-align: center;
+        padding: 1rem;
+        font-size: 2rem;
+        font-weight: bold;
+        margin: 0.5rem 0;
+        &:hover {
+          a {
+            transition: padding 200ms linear;
+            padding-left: 0.5rem;
+          }
+        }
+        a {
+          transition: padding 200ms linear;
+          color: $primaryColor;
+        }
+      }
+    }
+  }
+}
+@media only screen and (max-width: 500px) {
+  .modal_menu {
+    height: 120vh !important;
+  }
+}

@@ -1,0 +1,54 @@
+$primaryColor: #ff5912;
+
+body {
+  padding: 0;
+  margin: 0;
+}
+* {
+  box-sizing: border-box;
+  font-family: "Roboto";
+}
+ul {
+  padding: 0;
+  margin: 0;
+  li {
+    list-style-type: none;
+  }
+}
+a {
+  text-decoration: none;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  padding: 0;
+  margin: 0;
+}
+button {
+  outline: none;
+}
+.container {
+  width: 1170px;
+  margin: 0 auto;
+  padding: 0 0.5rem;
+}
+@media only screen and(max-width:1170px) {
+  .container {
+    width: auto;
+  }
+}
+@media only screen and (max-width: 450px) {
+  h1 {
+    font-size: 1.75rem !important;
+  }
+  h2 {
+    font-size: 1.35rem !important;
+  }
+  h3 {
+    font-size: 1.1rem !important;
+  }
+}

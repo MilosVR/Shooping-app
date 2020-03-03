@@ -7,6 +7,7 @@ import { fetchProducts } from "../actions/productActions";
 const Navbar = props => {
   useEffect(() => {
     props.fetchProducts("all");
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [props.product && props.product.count]);
 
   useEffect(() => {

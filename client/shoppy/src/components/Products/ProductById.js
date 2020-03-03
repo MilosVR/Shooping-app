@@ -52,10 +52,8 @@ const ProductById = props => {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
-  const [size, setSize] = useState(["S", "M", "L", "X", "XL"]);
+  const [size] = useState(["S", "M", "L", "X", "XL"]);
   const { product } = props;
-
-  console.log(product && product.brand);
 
   return (
     <div className="product_by_id">
@@ -164,7 +162,7 @@ const ProductById = props => {
           {props.product &&
             props.products.map(item => {
               return (
-                item.brand == product.brand &&
+                item.brand === product.brand &&
                 product.brand && (
                   <div className="product" key={item.id}>
                     <img src={item.img} alt="" />

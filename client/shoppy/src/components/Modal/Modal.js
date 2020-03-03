@@ -17,10 +17,12 @@ const Modal = props => {
     return () => {
       modal.removeEventListener("click", closeModal);
     };
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   useEffect(() => {
     props.fetchProducts("all");
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [props.product && props.product.count]);
 
   return (
@@ -52,7 +54,6 @@ const Modal = props => {
               </div>
             );
           })}
-        <div>Total price :</div>
       </div>
     </div>
   );

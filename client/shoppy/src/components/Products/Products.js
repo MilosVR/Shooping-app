@@ -26,10 +26,6 @@ const Products = props => {
   };
 
   const rangeInput = e => {
-    const product_list = document.querySelector(".product_list a");
-    const productsPrice = Array.from(product_list.children).map(item => {
-      return parseInt(item.children[2].children[0].innerHTML);
-    });
     setRangeInputValue(e.target.value);
   };
 
@@ -89,7 +85,6 @@ const Products = props => {
   const showBrand = () => {
     setIsShowBrand(!isShowBrand);
   };
-  console.log(loadMore);
 
   return (
     <div className="products">
